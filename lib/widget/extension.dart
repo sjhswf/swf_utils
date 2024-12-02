@@ -27,13 +27,13 @@ extension IterableWidgetExtension on Iterable<Widget> {
 
   /// 위젯 사이에 가로 방향 구분자를 추가하여 반환합니다.
   List<Widget> separateW({double? interval, Widget? separator}) {
-    assert(interval != null && separator != null);
+    assert((interval == null) ^ (separator == null));
     return _separateWidgets(separator ?? SizedBox(width: interval ?? 8.0));
   }
 
   /// 위젯 사이에 세로 방향 구분자를 추가하여 반환합니다.
   List<Widget> separateH({double? interval, Widget? separator}) {
-    assert(interval != null && separator != null);
+    assert((interval == null) ^ (separator == null));
     return _separateWidgets(separator ?? SizedBox(height: interval ?? 8.0));
   }
 }
