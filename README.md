@@ -828,6 +828,18 @@ flutter pub upgrade swf_utils
 
 ## 🔄 업데이트 정보
 
+#### v1.0.1 (2024-12-02)
+
+##### 오류 수정
+
+- `separateW()`, `separateH()`
+
+  - `assert` 조건 수정
+        
+    ```dart
+    assert((interval == null) ^ (separator == null));
+    ```
+
 #### v1.0.0 (2024-12-01)
 
 - 초기 릴리즈
